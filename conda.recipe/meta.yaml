@@ -1,0 +1,46 @@
+{% set version = '11.2.9' %}
+
+{% set posix = 'm2-' if win else '' %}
+{% set native = 'm2w64-' if win else '' %}
+
+package:
+  name: r-rgeostats
+  version: {{ version|replace("-", "_") }}
+
+source:
+  fn: RGeostats_{{ version }}_linux64.tar.gz
+  url:
+    - http://cg.ensmp.fr/rgeos/DOWNLOAD/RGeostats_{{ version }}_linux64.tar.gz
+
+  sha256: d180351c1b7973f169bebdb5fd90184bdf3db34e8d366974d0e1ab4d828be52f
+
+build:
+  # If this is a new build for the same version, increment the build number.
+  number: 0
+  
+  script_env:
+    - LD_LIBRARY_PATH # [linux]
+
+  # This is required to make R link correctly on Linux.
+  rpaths:
+    - lib/R/lib/
+    - lib/
+
+requirements:
+  build:
+    - r-base 3.5
+
+  run:
+    - r-base 3.5
+    - r-rcpp
+
+test:
+  commands:
+    - $R -e "library('RGeostats')"  # [not win]
+
+about:
+  home: http://rgeostats.free.fr/
+  license: http://rgeostats.free.fr/LICENSE
+  summary: RGeostats is the Geostatistical Package (under R platform)
+    developed by the Geostatistical Team of the Geosciences Research Center of MINES ParisTech.
+
