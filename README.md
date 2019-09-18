@@ -59,8 +59,8 @@ cd r-rgeostats/conda.recipe
 * Edit the `meta.yaml` file to update the following information:
 
 ``` 
-version
-md5
+version (first line)
+sha256
 ```
 
 * Install `conda-build` with:
