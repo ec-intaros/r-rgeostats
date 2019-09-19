@@ -103,3 +103,5 @@ git flow release finish -m "${version}" ${version}
 git config --global push.default matching
 git push
 ```
+
+The last command, git push, triggers a build process on https://build.terradue.com, which produces an Anaconda package for the new version and stores it under https://anaconda.org/Terradue/r-rgeostats.
