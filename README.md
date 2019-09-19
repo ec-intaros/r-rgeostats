@@ -86,6 +86,7 @@ git commit -am "Set new version"
 
 ```
 git flow init -d
+export GIT_MERGE_AUTOEDIT=no
 ``` 
 
 * Perform the release:
