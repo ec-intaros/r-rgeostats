@@ -32,17 +32,10 @@ sudo conda install r-rgeostats
 
 ### <a name="testing">Testing 
 
-* Export the proper environment variables:
-
-```
-export PATH=/opt/anaconda/bin:$PATH
-export LD_LIBRARY_PATH=/opt/glibc-2.14/lib:${LD_LIBRARY_PATH}
-```
-
 * Type:
 
 ```
-R -e "library('RGeostats')"
+LD_LIBRARY_PATH=/opt/glibc-2.14/lib:${LD_LIBRARY_PATH} /opt/anaconda/bin/R -e "library('RGeostats')"
 ```
 
 ### <a name="upgrade">Upgrade
