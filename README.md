@@ -26,6 +26,7 @@ sudo yum install -y glibc-2.14 miniconda
 * Install the R package:
 
 ```
+sudo conda update conda 
 sudo conda install r-rgeostats
 ```
 
