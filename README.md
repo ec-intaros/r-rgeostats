@@ -54,6 +54,7 @@ To upgrade this package to newer version of Rgeostats proceed as follows:
 ```
 git clone https://github.com/ec-intaros/r-rgeostats.git
 cd r-rgeostats/conda.recipe
+git checkout develop
 ```
 
 * Edit the `meta.yaml` file to update the following information:
@@ -75,4 +76,29 @@ sudo conda install conda-build
 sudo conda build .
 ```
  
-* Commit and push the local changes to the remote repository 
+* Commit and push the local changes to the remote repository:
+
+```
+git commit -am "Set new version"
+```
+
+* Initialise [git flow](https://danielkummer.github.io/git-flow-cheatsheet/):
+
+```
+git flow init -d
+``` 
+
+* Perform the release:
+
+```
+version=<your version number>
+git flow release start ${version}
+git flow release finish -m "${version}" ${version}
+```
+
+* Push the changes on the remote repository
+
+```
+git config --global push.default matching
+git push
+```
