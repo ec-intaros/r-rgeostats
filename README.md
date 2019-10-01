@@ -67,7 +67,8 @@ sudo conda install conda-build
 * Build the package with:
 
 ```
-sudo conda build .
+export LD_LIBRARY_PATH=/opt/glibc-2.14/lib:${LD_LIBRARY_PATH}
+conda build .
 ```
  
 * Commit and push the local changes to the remote repository:
