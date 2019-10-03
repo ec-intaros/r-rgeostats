@@ -1,4 +1,4 @@
-{% set version = '11.2.9' %}
+{% set version = '11.2.11' %}
 
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
@@ -12,11 +12,11 @@ source:
   url:
     - http://cg.ensmp.fr/rgeos/DOWNLOAD/RGeostats_{{ version }}_linux64.tar.gz
 
-  sha256: d180351c1b7973f169bebdb5fd90184bdf3db34e8d366974d0e1ab4d828be52f
+  sha256: edc1725b62f909d56775a3ff9a66c0980a840833ea2a4c0106cab85d2d865b44
 
 build:
   # If this is a new build for the same version, increment the build number.
-  number: 7
+  number: 1
   
   script_env:
     - LD_LIBRARY_PATH # [linux]
@@ -28,10 +28,10 @@ build:
 
 requirements:
   build:
-    - r-base 3.5
+    - r-base 3.5.*
 
   run:
-    - r-base 3.5
+    - r-base 3.5.*
     - libiconv
     - r-rcpp >=0.11.0
     - r-maps >=3.0.0
