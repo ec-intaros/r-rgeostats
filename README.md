@@ -50,9 +50,6 @@ sudo yum install -y glibc-2.14 miniconda
 sudo conda update -y conda
 sudo conda install -y conda-build
 ```
-sudo conda install -y --use-local r-rgeostats
-LD_LIBRARY_PATH=/opt/glibc-2.14/lib:${LD_LIBRARY_PATH} /opt/anaconda/bin/R -e "library('RGeostats')"
-
 
 * Clone the repo:
 
