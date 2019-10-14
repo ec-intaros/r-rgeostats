@@ -16,7 +16,7 @@ source:
 
 build:
   # If this is a new build for the same version, increment the build number.
-  number: 3
+  number: 4
   
   script_env:
     - LD_LIBRARY_PATH # [linux]
@@ -53,8 +53,8 @@ test:
     - $R -e "library('RGeostats')"  # [not win]
 
 about:
-  home: http://rgeostats.free.fr/
-  license: http://rgeostats.free.fr/LICENSE
+  home: http://cg.ensmp.fr/rgeostats
+  license: http://cg.ensmp.fr/rgeostats/LICENSE
   summary: RGeostats is the Geostatistical Package (under R platform)
     developed by the Geostatistical Team of the Geosciences Research Center of MINES ParisTech.
 
