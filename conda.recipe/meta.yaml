@@ -1,4 +1,4 @@
-{% set version = '11.2.11' %}
+{% set version = '14.0.5' %}
 
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
@@ -12,7 +12,7 @@ source:
   url:
     - http://cg.ensmp.fr/rgeos/DOWNLOAD/RGeostats_{{ version }}_linux64.tar.gz
 
-  sha256: edc1725b62f909d56775a3ff9a66c0980a840833ea2a4c0106cab85d2d865b44
+  sha256: 57af61b644bac7d851e8fd780ae3da5d7e63a5ba1a83ffe8fb3e602136fe499e
 
 build:
   # If this is a new build for the same version, increment the build number.
