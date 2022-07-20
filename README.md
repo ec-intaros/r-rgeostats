@@ -1,11 +1,11 @@
 # r-rgeostats
 
-r-rgeostats is an Anaconda package which provides RGeostats.
-RGeostats is the Geostatistical Package (under R platform) developed by the Geostatistical Team of the Geosciences Research Center of MINES ParisTech. More information at http://rgeostats.free.fr
+r-rgeostats is an Anaconda package which provides RGeostats package.
+RGeostats is the Geostatistical Package (under R platform) developed by the Geostatistical Team of the Geosciences Research Center of MINES ParisTech. More information at http://cg.ensmp.fr/rgeostats
 
 ## License
 
-* http://rgeostats.free.fr/LICENSE
+* http://cg.ensmp.fr/rgeostats/LICENSE
 
 
 ### Quick link
