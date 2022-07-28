@@ -1,5 +1,6 @@
 #!/bin/bash
 
+LD_LIBRARY_PATH=/opt/glibc-2.14/lib:${LD_LIBRARY_PATH}
 # R refuses to build packages that mark themselves as Priority: Recommended
 mv DESCRIPTION DESCRIPTION.old
 grep -v '^Priority: ' DESCRIPTION.old > DESCRIPTION
